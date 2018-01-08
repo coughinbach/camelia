@@ -19,7 +19,7 @@ class BooksController < ApplicationController
     authorize @book
     @book.user = current_user
     if @book.save
-      redirect_to books_path
+      redirect_to library_path
     else
       render :new
     end
@@ -44,7 +44,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     authorize @book
     @book.delete
-    redirect_to books_path
+    redirect_to library_path
   end
 
   private
