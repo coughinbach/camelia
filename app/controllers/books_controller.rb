@@ -26,15 +26,25 @@ class BooksController < ApplicationController
   end
 
   def edit
-
+    @book = Book.find(params[:id])
+    authorize @book
   end
 
   def update
-
+    @book = Book.find(params[:id])
+    authorize @book
+    if @book.update(book_params)
+      redirect_to book_path(@book)
+    else
+      render :edit
+    end
   end
 
   def destroy
-
+    @book = Book.find(params[:id])
+    authorize @book
+    @book.delete
+    redirect_to books_path
   end
 
   private
