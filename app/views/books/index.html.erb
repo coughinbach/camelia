@@ -9,4 +9,15 @@ user: <%= current_user.email %>
 <%= link_to destroy_user_session_path, method: :delete do %>
   <%= t(".sign_out", default: "Log out") %>
 <% end %>
+<br>
 
+
+
+
+<% url = 'http://openlibrary.org/search.json?title=the+lord+of+the+rings' %>
+<% response = RestClient.get(url) %>
+<% results = JSON.parse(response) %>
+<% docs = results.select {|k,v| k == "docs"} %>
+<% docs.each do |n| %>
+  <%= n[1][1].fetch("title") %>
+<% end %>
