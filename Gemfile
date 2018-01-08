@@ -20,6 +20,7 @@ gem 'devise'
 gem 'pundit'
 gem 'json'
 gem 'openlibrary'
+gem 'rest-client'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
