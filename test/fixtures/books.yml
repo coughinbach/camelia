@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: MyString
+  cover: MyString
+  genre: MyString
+  start_date: 2018-01-08
+  end_date: 2018-01-08
+  status: MyString
+  rating: 1
+  comment: MyText
+
+two:
+  title: MyString
+  author: MyString
+  cover: MyString
+  genre: MyString
+  start_date: 2018-01-08
+  end_date: 2018-01-08
+  status: MyString
+  rating: 1
+  comment: MyText
