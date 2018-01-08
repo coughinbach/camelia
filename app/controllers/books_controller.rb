@@ -17,7 +17,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     authorize @project
-    @book.owner = current_user
+    @book.user = current_user
   end
 
   def edit
