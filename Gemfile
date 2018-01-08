@@ -18,6 +18,8 @@ gem 'webpacker'
 
 gem 'devise'
 gem 'pundit'
+gem 'json'
+gem 'openlibrary'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
