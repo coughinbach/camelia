@@ -1,0 +1,11 @@
+user: <%= current_user.email %>
+<br>
+<% @books.each do |book| %>
+  <%= link_to book.title, book_path(book) %>
+<% end %>
+<br>
+<%= link_to "add book", new_book_path %>
+<br>
+<%= link_to destroy_user_session_path, method: :delete do %>
+  <%= t(".sign_out", default: "Log out") %>
+<% end %>

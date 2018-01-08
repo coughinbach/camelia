@@ -1,0 +1,17 @@
+<%= @book.user.email %>
+<br>
+<%= @book.title %>
+<br>
+<%= @book.author %>
+<br>
+<%= @book.status %>
+<br>
+<% if policy(@book).edit? %>
+  <%= link_to "edit", edit_book_path(@book) %>
+<% end %>
+<br>
+<% if policy(@book).destroy? %>
+  <%= link_to "delete", book_path(@book), method: :delete %>
+<% end %>
+<br>
+<%= link_to "back to library", books_path %>
